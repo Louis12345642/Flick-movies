@@ -4,8 +4,23 @@
   --white:#fff;
   --sliderCirclesNotactive:#D9D9D9;
   --sliderCirclesActive:#880F0F;
-  --mainContainerMargins:1.875rem 3.75rem 1.75rem 3.75rem 
+  --mainContainerMargins:1.875rem 3.75rem 1.75rem 3.75rem;
+  --mobileMargin:20px 20px 20px 20px;
 }
+/* these are the style that apply to the whole website */
+.handbuger{
+  display: none;
+}
+.line{
+  width: 20px;
+  height: 1.5px;
+  background-color: var(--white);
+  margin-top: 4px;
+}
+.mobileContainer{
+  margin: var(--mobileMargin);
+}
+/* these are the styles required for the body */
 body{
   background-color: var(--MainColor);
   color: var(--white);
@@ -22,3 +37,24 @@ margin: var(--mainContainerMargins);
   height: 1.465rem;
   object-fit: cover;
 }
+
+
+/* making the breakpoints for the mobile size */
+@media (max-width: 640px){ 
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: var(--mobileMargin);
+  }
+  .nav-items{
+    display: none;
+  }
+  .signup img,p{
+    display: none;
+  }
+  .handbuger{
+    display:block;
+  }
+  
+ }
