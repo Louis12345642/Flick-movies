@@ -12,14 +12,15 @@
   display: none;
 }
 .line{
-  width: 20px;
-  height: 1.5px;
+  width: 1.25rem;
+  height: 0.094rem;
   background-color: var(--white);
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 .mobileContainer{
   margin: var(--mobileMargin);
 }
+
 /* these are the styles required for the body */
 body{
   background-color: var(--MainColor);
@@ -38,6 +39,28 @@ margin: var(--mainContainerMargins);
   object-fit: cover;
 }
 
+/* animations and hover */
+ li{
+  position: relative;
+}
+.border-link{
+  position: absolute;
+ 
+  right: 0;
+  height: 4px;
+  width: 100%;
+  bottom: -18px;
+  background:linear-gradient(45deg, var(--btnColor) 50%, rgb(235, 235, 99));
+  border-radius: 2px;
+  opacity: 0;
+}
+.nav-items li:hover{
+  .border-link{
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+  }
+
+}
 
 /* making the breakpoints for the mobile size */
 @media (max-width: 640px){ 
