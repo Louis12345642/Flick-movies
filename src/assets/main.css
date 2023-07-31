@@ -20,6 +20,23 @@
 .mobileContainer{
   margin: var(--mobileMargin);
 }
+/* working on the crossing of the  */
+.open div:nth-child(1){
+ transform:rotate(45deg);
+ transform-origin: center center;
+}
+.open div:nth-child(2){
+  transform:rotate(-45deg);
+  transform-origin: center left;
+ }
+ .open div:nth-child(3){
+ opacity: 0;
+  transform-origin: center;
+ }
+ .open {
+  transition:all  900ms ease-in-out ;
+ }
+ 
 
 /* these are the styles required for the body */
 body{

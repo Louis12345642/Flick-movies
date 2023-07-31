@@ -15,7 +15,7 @@
     </li>
   </ul></div>
   <div class="flex gap-1 rounded-md signup"><img class="smallIcons" src="/bell.png" alt=""><p><a href="#">Signup</a></p></div>
-  <div class="handbuger">
+  <div class="handbuger open">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
