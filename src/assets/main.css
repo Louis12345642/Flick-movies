@@ -20,10 +20,11 @@
 .mobileContainer{
   margin: var(--mobileMargin);
 }
-/* working on the crossing of the  */
+/* working on the crossing of the handbugger animation */
 .open div:nth-child(1){
  transform:rotate(45deg);
  transform-origin: center center;
+
 }
 .open div:nth-child(2){
   transform:rotate(-45deg);
@@ -34,7 +35,8 @@
   transform-origin: center;
  }
  .open {
-  transition:all  900ms ease-in-out ;
+  transition:all  900ms ease-in-out;
+  cursor: pointer;
  }
  
 
