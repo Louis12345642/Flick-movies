@@ -89,6 +89,14 @@ margin: var(--mainContainerMargins);
   display: none;
   
   }
+  /* this section contains all the styles of hero section */
+
+  .hero{
+    background:linear-gradient(180deg, #260202 , var(--MainColor));
+    margin-top: 0;
+    padding-top: 10px;
+    height: 100vh;
+  }
 
 /* making the breakpoints for the mobile size */
 @media (max-width: 640px){ 
@@ -113,9 +121,14 @@ margin: var(--mainContainerMargins);
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 50px;
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
+    background-color:var(--MainColor);
+    border-bottom: 3px solid var(--MainColor);
+
+    /* background-color:rgb(29, 26, 29); */
+    height: 50vh;
 
   }
 

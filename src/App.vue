@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 
 //this is how you can access the dom elements in vue script setup
 const hand = ref()
+//grapping the mobile style ul tag to apply the transform style
 const menu=ref()
 
 //create a function that is called when the handbugger is click
@@ -13,7 +14,6 @@ const toggleCross: Function = (): void => {
     hand.value.classList.remove('open')
   } else {
     hand.value.classList.add('open')
-    console.log(menu.value)
   
   }
   if(menu.value.classList.contains('translate-x-0')){
@@ -31,7 +31,8 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <nav
+ <section class="hero">
+  <nav
       class="sm:flex sm:justify-between md:flex md:justify-between mainContainer md:mainContainer navbar"
     >
       <div class="flex gap-1 logo">
@@ -50,6 +51,14 @@ onMounted(() => {
           </li>
           <li>
             <a href="#">Sports</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+          <li>
+            <a href="#">Movies</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+          <li>
+            <a href="#">Series</a>
             <div class="border-link shadow-md"></div>
           </li>
         </ul>
@@ -80,8 +89,29 @@ onMounted(() => {
             <a href="#">Sports</a>
             <div class="border-link shadow-md"></div>
           </li>
+          <li>
+            <a href="#">movies</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+          <li>
+            <a href="#">series</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+
+          <br>
+      
+          <!-- <li>
+            <div class="flex gap-1 rounded-md ">
+        <img class="smallIcons" src="/bell.png" alt="" />
+        <a href="#">Signup</a>
+      </div>
+          </li> -->
       </div>
       </ul>
+ </section>
+ <section>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci impedit corporis blanditiis odio, autem accusantium nostrum architecto deleniti illum consequuntur dolorem dicta laborum consequatur, magni, unde aliquid. Labore, et aspernatur.
+ </section>
   </div>
 </template>
 <style>
