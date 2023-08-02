@@ -24,18 +24,21 @@
 .open div:nth-child(1){
  transform:rotate(45deg);
  transform-origin: center center;
+ transition:all  500ms ease-in-out;
 
 }
 .open div:nth-child(2){
   transform:rotate(-45deg);
   transform-origin: center left;
+  transition:all  500ms ease-in-out;
  }
  .open div:nth-child(3){
  opacity: 0;
   transform-origin: center;
+  transition:all  500ms ease-in-out;
  }
  .open {
-  transition:all  900ms ease-in-out;
+
   cursor: pointer;
  }
  
@@ -112,7 +115,9 @@ margin: var(--mainContainerMargins);
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
 
   }
+
   
  }
