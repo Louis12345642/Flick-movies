@@ -79,7 +79,13 @@ margin: var(--mainContainerMargins);
     transition: opacity 500ms ease-in-out;
   }
 
+
 }
+.mobile-menu{
+
+  display: none;
+  
+  }
 
 /* making the breakpoints for the mobile size */
 @media (max-width: 640px){ 
@@ -97,6 +103,16 @@ margin: var(--mainContainerMargins);
   }
   .handbuger{
     display:block;
+  }
+
+  .mobile-menu{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+
   }
   
  }

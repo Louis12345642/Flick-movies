@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 
 //this is how you can access the dom elements in vue script setup
 const hand = ref()
+const menu=ref()
 
 //create a function that is called when the handbugger is click
 const toggleCross: Function = (): void => {
@@ -12,6 +13,15 @@ const toggleCross: Function = (): void => {
     hand.value.classList.remove('open')
   } else {
     hand.value.classList.add('open')
+    console.log(menu.value)
+  
+  }
+  if(menu.value.classList.contains('translate-x-0')){
+ 
+    menu.value.classList.remove('translate-x-0')
+  }
+  else{
+    menu.value.classList.add('translate-x-0')
   }
 }
 onMounted(() => {
@@ -53,7 +63,25 @@ onMounted(() => {
         <div class="line"></div>
         <div class="line"></div>
       </div>
+
+    
     </nav>
+    <ul class="mobile-menu " ref="menu">
+      <div class="space-y-5 mt-5">
+          <li>
+            <a href="#">TV shows</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+          <li>
+            <a href="#">Events</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+          <li>
+            <a href="#">Sports</a>
+            <div class="border-link shadow-md"></div>
+          </li>
+      </div>
+      </ul>
   </div>
 </template>
 <style>
