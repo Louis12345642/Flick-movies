@@ -8,6 +8,9 @@
   --mobileMargin:20px 20px 20px 20px;
 }
 /* these are the style that apply to the whole website */
+.container{
+  margin:var(--mainContainerMargins);
+}
 .handbuger{
   display: none;
 }
@@ -97,7 +100,25 @@ margin: var(--mainContainerMargins);
     padding-top: 10px;
     height: 100vh;
   }
-
+  .hero-heading h1{
+    
+    -webkit-text-stroke:2px #880F0F;
+    font-size: 5rem;
+    font-weight:500;
+  }
+  .hero-icons img{
+    width: 25px;
+  }
+ .rating{
+  font-size: 10px;
+  margin-top: 6px;
+ }
+ .red-btn button{
+  background-color:  var(--btnColor);
+  font-size: 13px;
+  padding:10px;
+  
+ }
 /* making the breakpoints for the mobile size */
 @media (max-width: 640px){ 
 

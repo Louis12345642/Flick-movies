@@ -100,18 +100,26 @@ onMounted(() => {
 
           <br>
       
-          <!-- <li>
-            <div class="flex gap-1 rounded-md ">
-        <img class="smallIcons" src="/bell.png" alt="" />
-        <a href="#">Signup</a>
-      </div>
-          </li> -->
+  
       </div>
       </ul>
+
+      <section class="container">
+        <div class="hero-heading">
+          <h1 class="text-bold" >SPIDER</h1>
+          <P>Action and advanture movie</P>
+         <div class="flex gap-2"> <p class="rating">7.9/306k</p> <img  class="w-7" src="/imdb.png" alt=""></div>
+         <div class="flex gap-3 hero-icons mt-5"><img src="/instagram.png" alt="">
+          <img src="/bell.png" alt="">
+          <img src="github.png" alt=""></div>
+          <div class="red-btn mt-5">
+        <button class="rounded-md shadow-md">see more details</button>
+          </div>
+        </div>
+      </section> 
+      
  </section>
- <section>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci impedit corporis blanditiis odio, autem accusantium nostrum architecto deleniti illum consequuntur dolorem dicta laborum consequatur, magni, unde aliquid. Labore, et aspernatur.
- </section>
+ 
   </div>
 </template>
 <style>
