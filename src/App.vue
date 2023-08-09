@@ -104,18 +104,29 @@ onMounted(() => {
       </div>
       </ul>
 
-      <section class="container">
-        <div class="hero-heading">
+      <section class="mainContainer grid grid-cols-3 gap-0">
+
+    <div class="hero-heading ">
           <h1 class="text-bold" >SPIDER</h1>
           <P>Action and advanture movie</P>
+          <p>After being bitten by a genetically altered spider, outcast teenager</p>
          <div class="flex gap-2"> <p class="rating">7.9/306k</p> <img  class="w-7" src="/imdb.png" alt=""></div>
          <div class="flex gap-3 hero-icons mt-5"><img src="/instagram.png" alt="">
           <img src="/bell.png" alt="">
           <img src="github.png" alt=""></div>
           <div class="red-btn mt-5">
-        <button class="rounded-md shadow-md">see more details</button>
+        <button class="rounded-md shadow-md">see more Details</button>
           </div>
         </div>
+      
+ 
+   <div class="spider-image  place-self-center">
+     <img src="/spider-man-png-from-pngfre-46-1.png" alt="">
+        </div>
+        <div class="man-text flex items-end ">
+      <h1 class="">MAN</h1>
+        </div>
+     
       </section> 
       
  </section>
