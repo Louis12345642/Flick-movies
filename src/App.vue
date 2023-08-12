@@ -104,13 +104,14 @@ onMounted(() => {
       </div>
       </ul>
 
-      <section class="mainContainer grid grid-cols-3 gap-0">
+      <section class="md:mainContainer md:grid md:grid-cols-3 md:gap-0  grid grid-cols-1 mobile-container">
 
     <div class="hero-heading ">
-          <h1 class="text-bold" >SPIDER</h1>
-          <P>Action and advanture movie</P>
-          <p>After being bitten by a genetically altered spider, outcast teenager</p>
-         <div class="flex gap-2"> <p class="rating">7.9/306k</p> <img  class="w-7" src="/imdb.png" alt=""></div>
+          <h1 class="text-bold mobile-text-head" >SPIDER</h1>
+          <h2 class="text-bold large-screen-text " >SPIDER MAN</h2>
+          <h6>Action and advanture movie</h6>
+          <h6>After being bitten by a genetically altered spider, outcast teenager</h6>
+         <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
          <div class="flex gap-3 hero-icons mt-5"><img src="/instagram.png" alt="">
           <img src="/bell.png" alt="">
           <img src="github.png" alt=""></div>
