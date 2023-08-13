@@ -119,20 +119,25 @@ onMounted(() => {
         <button class="rounded-md shadow-md">see more Details</button>
           </div>
         </div>
-      
- 
    <div class="spider-image  place-self-center">
      <img src="/spider-man-png-from-pngfre-46-1.png" alt="">
         </div>
         <div class="man-text flex items-end ">
       <h1 class="">MAN</h1>
         </div>
-     
+
+        <section class="whatch-history">
+          <div class="whatch-history-card">
+          <h4>Spider Man</h4>
+          <div>
+            <p>spiderman science fiction</p>
+          </div>
+          </div>
+        </section>
       </section> 
-      
  </section>
- 
   </div>
 </template>
 <style>
+
 </style>

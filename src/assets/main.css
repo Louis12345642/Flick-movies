@@ -1,11 +1,13 @@
 :root{
   --MainColor:#1E1E1E;
+  --primaryColor:#252525;
   --btnColor:#880F0F;
   --white:#fff;
   --sliderCirclesNotactive:#D9D9D9;
   --sliderCirclesActive:#880F0F;
   --mainContainerMargins:1.875rem 3.75rem 1.75rem 3.75rem;
   --mobileMargin:20px 20px 20px 20px;
+  --cardMargin:10px 10px 10px 10px;
 }
 /* these are the style that apply to the whole website */
 .container{
@@ -155,6 +157,18 @@ margin: var(--mainContainerMargins);
  }
  .large-screen-text{
   display: none;
+}
+
+/* working on the watch history */
+
+.whatch-history{
+  margin: var(--cardMargin);
+}
+.whatch-history-card{
+  background-color:var(--primaryColor);
+  padding: var(--cardMargin);
+
+
 }
 /* making the breakpoints for the mobile size */
 @media (max-width: 640px){ 
