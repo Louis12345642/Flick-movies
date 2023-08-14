@@ -104,7 +104,7 @@ onMounted(() => {
       </div>
       </ul>
 
-      <section class="md:mainContainer md:grid md:grid-cols-3 md:gap-0  grid grid-cols-1 mobile-container">
+      <section class="mainContainer md:grid md:grid-cols-3 md:gap-10  grid grid-cols-1 sm:mobile-container">
 
     <div class="hero-heading ">
           <h1 class="text-bold mobile-text-head" >SPIDER</h1>
@@ -125,19 +125,79 @@ onMounted(() => {
         <div class="man-text flex items-end ">
       <h1 class="">MAN</h1>
         </div>
-
-        <section class="whatch-history">
-          <div class="whatch-history-card">
-          <h4>Spider Man</h4>
-          <div>
-            <p>spiderman science fiction</p>
-          </div>
-          </div>
-        </section>
       </section> 
+
+    
+<div class="mainContainer">
+  <h3 class="uppercase">whatch history</h3>
+  <section class="mt-10 whatch-history grid grid-cols-1 md:grid md:grid-cols-4 sm:grid sm:grid-cols-2 gap-8">
+    <div class="whatch-history-card">
+            <div>
+              <img src="/avater.jpg" alt="">
+
+            </div>
+      
+          <h4 class="mt-2 uppercase">Spider Man</h4>
+          <div>
+            <h5>spiderman science fiction</h5>
+          </div>
+          </div>
+
+          <div class="whatch-history-card">
+            <div>
+              <img src="/avater.jpg" alt="">
+
+            </div>
+      
+          <h4 class="mt-2 uppercase">Spider Man</h4>
+          <div>
+            <h5>spiderman science fiction</h5>
+          </div>
+          </div>
+
+          <div class="whatch-history-card">
+            <div>
+              <img src="/avater.jpg" alt="">
+
+            </div>
+      
+          <h4 class="mt-2 uppercase">Spider Man</h4>
+          <div>
+            <h5>spiderman science fiction</h5>
+          </div>
+          </div>
+
+          <div class="whatch-history-card">
+            <div>
+              <img src="/avater.jpg" alt="">
+
+            </div>
+      
+          <h4 class="mt-2 uppercase">Spider Man</h4>
+          <div>
+            <h5>spiderman science fiction</h5>
+          </div>
+          </div>
+     
+        </section>
+</div> 
+<!-- working on the main cards of the website -->
+<div class="recomended-movies mt-20 mainContainer ">
+<section>
+  <div class="flex justify-between ">
+  <h1 class="uppercase">continue watching</h1>
+  <div>
+    <form class="movie-search">
+      <input placeholder="popular" type="text">
+    </form>
+  </div>
+  </div>
+</section>
+</div>
+
+      
  </section>
   </div>
 </template>
 <style>
-
 </style>

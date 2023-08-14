@@ -97,10 +97,10 @@ margin: var(--mainContainerMargins);
   /* this section contains all the styles of hero section */
 
   .hero{
-    background:linear-gradient(180deg, #260202 , var(--MainColor));
+    background:linear-gradient(180deg, #260202 10%, var(--MainColor));
     margin-top: 0;
     padding-top: 10px;
-    height: 100vh;
+    height: 100%;
   }
   .hero-heading h1{
     
@@ -113,6 +113,10 @@ margin: var(--mainContainerMargins);
     -webkit-text-stroke:2px #880F0F;
     font-size: 3rem;
     font-weight:500;
+  }
+  .hero-heading h6{
+      font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   }
   .hero-heading p{
     font-size: 14px;
@@ -162,15 +166,41 @@ margin: var(--mainContainerMargins);
 /* working on the watch history */
 
 .whatch-history{
+
+
   margin: var(--cardMargin);
+  width: 100%;
 }
 .whatch-history-card{
   background-color:var(--primaryColor);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
   padding: var(--cardMargin);
-
+  border-radius: 10px;
+  padding: 20px;
+  /* width: 270px; */
+}
+.whatch-history-card img{
+  height: 81px;
+  width: 119px;
+  border-radius: 5px;
 
 }
+
+.whatch-history-card h1{
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.whatch-history-card p{
+  font-size: 14px;
+}
+
+.movie-search input{
+  background-color: var(--primaryColor);
+  height: 41px;
+  border-radius:10px;
+}
 /* making the breakpoints for the mobile size */
+
 @media (max-width: 640px){ 
 
   /* mobile here section design */
@@ -220,6 +250,7 @@ margin: var(--mainContainerMargins);
     height: 100vh;
 
   }
+
 
   
  }
