@@ -1,2 +1,2 @@
 /// <reference types="vite/client" />
-API_KEY =''
+API_KEY ='';

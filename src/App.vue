@@ -133,7 +133,19 @@ onMounted(() => {
   <section class="mt-10 whatch-history grid grid-cols-1 md:grid md:grid-cols-4 sm:grid sm:grid-cols-2 gap-8">
     <div class="whatch-history-card">
             <div>
-              <img src="/avater.jpg" alt="">
+              <img class="bg-cover" src="/john_wick_1.jpg" alt="">
+
+            </div>
+      
+          <h4 class="mt-2 uppercase">Spider Man</h4>
+          <div>
+            <h5>spiderman science fiction</h5>
+          </div>
+          </div>
+
+          <div class="whatch-history-card">
+            <div>
+              <img src="/anime.jpg" alt="">
 
             </div>
       
@@ -157,19 +169,7 @@ onMounted(() => {
 
           <div class="whatch-history-card">
             <div>
-              <img src="/avater.jpg" alt="">
-
-            </div>
-      
-          <h4 class="mt-2 uppercase">Spider Man</h4>
-          <div>
-            <h5>spiderman science fiction</h5>
-          </div>
-          </div>
-
-          <div class="whatch-history-card">
-            <div>
-              <img src="/avater.jpg" alt="">
+              <img src="/avater_1.jpg" alt="">
 
             </div>
       
@@ -184,14 +184,92 @@ onMounted(() => {
 <!-- working on the main cards of the website -->
 <div class="recomended-movies mt-20 mainContainer ">
 <section>
-  <div class="flex justify-between ">
-  <h1 class="uppercase">continue watching</h1>
-  <div>
-    <form class="movie-search">
+  <div class="md:flex md:justify-between sm:flex sm:justify-between mt-8 mb-8">
+  <h1 class="uppercase sm:mb-4">continue watching</h1>
+
+    <form class="movie-search mt-8 sm:mt-0 md:mt-0">
       <input placeholder="popular" type="text">
     </form>
+
   </div>
+
+ <div class="movies grid grid-cols-1 md:grid md:grid-cols-3 gap-8 ">
+  <div class="movie-card">
+    <div class="card-img">
+      <img src="/john_wick.jpg" alt="">
+    </div>
+    <div class="movie-cards-margins">
+      <button class="stream-type uppercase">movie</button>
+      <h1 class="mt-4">AVATER</h1>
+      <h5 class="text-sm">The way of the water Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+      <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
+      <div class="mt-5 flex  gap-4">
+        <img class="round-image w-12 h-12  " src="/avater_1.jpg" alt="">
+        <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
+      </div>
+    </div>
+  
   </div>
+
+  <div class="movie-card">
+    <div class="card-img">
+      <img src="/avater_1.jpg" alt="">
+    </div>
+    <div class="movie-cards-margins">
+      <button class="stream-type uppercase">movie</button>
+      <h1 class="mt-4">AVATER</h1>
+      <h5 class="text-sm">The way of the water Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+      <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
+      <div class="mt-5 flex  gap-4">
+        <img class="round-image w-12 h-12  " src="/john_wick.jpg" alt="">
+        <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="movie-card">
+    <div class="card-img">
+      <img src="/anime.jpg" alt="">
+    </div>
+    <div class="movie-cards-margins">
+      <button class="stream-type uppercase">movie</button>
+      <h1 class="mt-4">AVATER</h1>
+      <h5 class="text-sm">The way of the water Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+      <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
+      <div class="mt-5 flex  gap-4">
+        <img class="round-image w-12 h-12  " src="/avater.jpg" alt="">
+        <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="movie-card">
+    <div class="card-img">
+      <img src="/avater.jpg" alt="">
+    </div>
+    <div class="movie-cards-margins">
+      <button class="stream-type uppercase">movie</button>
+      <h1 class="mt-4">AVATER</h1>
+      <h5 class="text-sm">The way of the water Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+      <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
+      <div class="mt-5 flex  gap-4">
+        <img class="round-image w-12 h-12  " src="/avater.jpg" alt="">
+        <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
+      </div>
+    </div>
+  
+  </div>
+
+ 
+
+ 
+
+
+ </div>
+
+
 </section>
 </div>
 
