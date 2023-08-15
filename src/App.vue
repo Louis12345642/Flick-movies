@@ -317,11 +317,13 @@ onMounted(() => {
         <h1><a href="/">MFlick</a></h1>
       </div>
         <h6 class="text-sm">Action and advanture movie</h6>
-          <h6 class="text-sm">After being bitten by a genetically altered spider, outcast teenager</h6>
+          <h6 class="text-sm">After being bitten by a genetically altered spider, outcast teenager </h6>
          <div class="flex gap-4"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
          <div class="flex gap-3 hero-icons mt-5"><img src="/instagram.png" alt="">
           <img src="/bell.png" alt="">
           <img src="github.png" alt=""></div>
+      
+          <div class="mt-4"><h6 class="text-sm"> Movie-Flick &copy 2023</h6></div>
           <!-- <div class="red-btn mt-5">
         <button class="rounded-md shadow-md">see more Details</button>
           </div> -->
