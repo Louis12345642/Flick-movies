@@ -245,6 +245,11 @@ font-size: 12px;
 
 
 }
+/* working on the footer designs */
+.footer-design{
+  background-color: var(--primaryColor);
+  width: 100%;
+}
 /* making the breakpoints for the mobile size */
 
 @media (max-width: 640px){ 
