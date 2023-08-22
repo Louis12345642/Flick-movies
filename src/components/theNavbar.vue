@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup  lang="ts" >
 import { ref, onMounted } from 'vue'
 //this is how you can access the dom elements in vue script setup
 const hand = ref()
