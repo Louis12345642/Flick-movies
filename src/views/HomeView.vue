@@ -11,11 +11,9 @@ import theMovies from '../components/movies_and_series/theMovies.vue'
 
 <div class="mainContainer">
   <h3 class="uppercase">whatch history</h3>
-  <section
-    class="mt-10 whatch-history grid grid-cols-1 md:grid md:grid-cols-4 sm:grid sm:grid-cols-2 gap-8"
-  >
+
     <the-watch-history />
-  </section>
+
 </div>
 <!-- working on the main cards of the website -->
 <div class="recomended-movies mt-20 mainContainer">
