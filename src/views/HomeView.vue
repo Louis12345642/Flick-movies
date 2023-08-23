@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import heroSection from '../components/heroSection.vue'
-import theWatchHistory from '../components/theWatchHistory.vue'
-import theMovies from '../components/theMovies.vue'
+import heroSection from '../components/hero_section/heroSection.vue'
+import theWatchHistory from '../components/watch_history/theWatchHistory.vue'
+import theMovies from '../components/movies_and_series/theMovies.vue'
 
 </script>
 

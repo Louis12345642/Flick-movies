@@ -1,6 +1,9 @@
+<script setup lang="ts">
+</script>
+
 <template>
-     <div class="movies grid grid-cols-1 md:grid md:grid-cols-3 gap-8 ">
-  <div class="movie-card">
+
+<div class="movie-card">
     <div class="card-img">
       <img src="/john_wick.jpg" alt="">
     </div>
@@ -14,9 +17,7 @@
         <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
       </div>
     </div>
-  
   </div>
-
   <div class="movie-card">
     <div class="card-img">
       <img src="/avater_1.jpg" alt="">
@@ -100,5 +101,4 @@
       </div>
     </div>
   </div>
- </div>
 </template>
