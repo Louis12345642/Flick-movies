@@ -2,25 +2,17 @@
 import heroSection from '../components/hero_section/heroSection.vue'
 import theWatchHistory from '../components/watch_history/theWatchHistory.vue'
 import theMovies from '../components/movies_and_series/theMovies.vue'
-
-import {useMovies }from '../../src/stores/movies'
-
-
-const movieData =useMovies()
-
-console.log(movieData.movies)
+import {useFilm} from '../../src/stores/filmStore'
 
 
-
-
+//get the film a store to make action
+const film =useFilm()
 
 //get user's search value
 let user_search=""
 
 const getUsersearch=():void=>{
-
-  //emitting the value the user searched
-  movieData.searchMovie({"name":user_search,"country":"uganda","isMovie":true})
+  film.searchFilm(user_search)
   // console.log(user_search)
 }
 
@@ -31,7 +23,7 @@ const getUsersearch=():void=>{
     <hero-section />
 
 <div class="mainContainer">
-  <h3 class="uppercase" v-for="movie in movieData.movies" :key="movie.country">{{ movie.name }}</h3>
+  <!-- <h3 class="uppercase" v-for="movie in movieData.movies" :key="movie.country">{{ movie.name }}</h3> -->
 
     <the-watch-history />
 
