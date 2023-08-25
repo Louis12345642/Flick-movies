@@ -3,16 +3,25 @@ import heroSection from '../components/hero_section/heroSection.vue'
 import theWatchHistory from '../components/watch_history/theWatchHistory.vue'
 import theMovies from '../components/movies_and_series/theMovies.vue'
 import {useFilm} from '../../src/stores/filmStore'
+import { ref } from 'vue'
 
 
 //get the film a store to make action
 const film =useFilm()
 
+console.log(film.Films)
 //get user's search value
-let user_search=""
+let user_search=ref('')
 
 const getUsersearch=():void=>{
-  film.searchFilm(user_search)
+  //validate user's search 
+  if(user_search.value.length>2){
+    film.searchFilm(user_search.value)
+  }
+  else{
+    console.log("please enter a search value")
+  }
+
   // console.log(user_search)
 }
 
@@ -23,7 +32,7 @@ const getUsersearch=():void=>{
     <hero-section />
 
 <div class="mainContainer">
-  <!-- <h3 class="uppercase" v-for="movie in movieData.movies" :key="movie.country">{{ movie.name }}</h3> -->
+  <h3 class="uppercase">whatch history</h3>
 
     <the-watch-history />
 
@@ -39,7 +48,7 @@ const getUsersearch=():void=>{
       </form>
     </div>
 
-    <theMovies />
+    <theMovies :Films="film.Films" />
   </section>
 </div>
   </main>
