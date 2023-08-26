@@ -1,13 +1,21 @@
 <script setup lang="ts">
+import { useFilm } from '@/stores/filmStore';
 const props:any=defineProps({
   film:Object
 })
+
+
+
+
+
 </script>
 
 <template>
 
 <div  class="movie-card">
     <div class="card-img">
+
+   
       <img :src="props.film.Poster" alt="">
     </div>
     <div class="movie-cards-margins">
@@ -21,6 +29,7 @@ const props:any=defineProps({
       </div>
     </div>
   </div>
+
 
 
   <!-- <div v-else class="movie-card">

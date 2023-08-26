@@ -4,14 +4,42 @@ import theWatchHistory from '../components/watch_history/theWatchHistory.vue'
 import theMovies from '../components/movies_and_series/theMovies.vue'
 import {useFilm} from '../../src/stores/filmStore'
 import { ref } from 'vue'
+import { onBeforeMount } from 'vue'
 
+
+
+
+//calling the default movie function
 
 //get the film a store to make action
 const film =useFilm()
 
-console.log(film.Films)
+
 //get user's search value
 let user_search=ref('')
+
+//get the state of the api
+
+const loaded:boolean=film.loaded
+
+//calling the default movies here
+ async function getDefaultFilm(){
+  const defaultSearch:string="hello"
+        const api_key =import.meta.env.VITE_API_KEY; 
+        const res=  await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${defaultSearch}`);
+        const  data = await res.json()
+        film.Films= data.Search
+   
+}
+onBeforeMount(()=>{
+  getDefaultFilm()
+})
+
+//get default film
+film.SearchDfaultFilms()
+
+const defaultFilms =film.defaultFilms
+
 
 const getUsersearch=():void=>{
   //validate user's search 
@@ -22,7 +50,7 @@ const getUsersearch=():void=>{
     console.log("please enter a search value")
   }
 
-  // console.log(user_search)
+
 }
 
 </script>
@@ -47,7 +75,8 @@ const getUsersearch=():void=>{
         <input v-model="user_search" placeholder="popular" type="text" />
       </form>
     </div>
-    <theMovies :Films="film.Films" />
+    {{defaultFilms}}
+    <theMovies :Films="film.Films" :loaded="loaded" />
   </section>
 </div>
   </main>
