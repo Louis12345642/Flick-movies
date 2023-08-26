@@ -47,7 +47,6 @@ const getUsersearch=():void=>{
         <input v-model="user_search" placeholder="popular" type="text" />
       </form>
     </div>
-
     <theMovies :Films="film.Films" />
   </section>
 </div>

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-defineProps({
+const props:any=defineProps({
   film:Object
 })
 </script>
 
 <template>
 
-<div v-if="film" class="movie-card">
+<div  class="movie-card">
     <div class="card-img">
-      <img :src="film.Poster" alt="">
+      <img :src="props.film.Poster" alt="">
     </div>
     <div class="movie-cards-margins">
-      <button class="stream-type uppercase">{{ film.Type }}</button>
-      <h1 class="mt-4">{{ film.Title }}</h1>
-      <h5 class="text-sm">{{ film.Title }}</h5>
+      <button class="stream-type uppercase">{{props.film.Type }}</button>
+      <h1 class="mt-4">{{props.film.Title }}</h1>
+      <h5 class="text-sm">{{props.film.Type}}</h5>
       <div class="flex gap-2"> <h6 class="rating">7.9/306k</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
       <div class="mt-5 flex  gap-4">
         <img class="round-image w-12 h-12  " src="/avater_1.jpg" alt="">
@@ -23,7 +23,7 @@ defineProps({
   </div>
 
 
-  <div v-else class="movie-card">
+  <!-- <div v-else class="movie-card">
     <div class="card-img">
       <img src="/avater_1.jpg" alt="">
     </div>
@@ -105,5 +105,5 @@ defineProps({
         <h5 class=" align-middle mb-2 mt-4">Mkay_dev</h5>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
