@@ -8,7 +8,7 @@ import { onBeforeMount } from 'vue'
 
 
 //get the film a store to make action
-const film =useFilm()
+const film:any =useFilm()
 
 
 //get user's search value
@@ -35,7 +35,7 @@ onBeforeMount(()=>{
 //a function to allow the user search for a film
 const getUsersearch=():void=>{
   //validate user's search 
-  if(user_search.value.length>2){
+  if(user_search.value !=""){
     film.searchFilm(user_search.value)
   }
   else{
@@ -43,6 +43,10 @@ const getUsersearch=():void=>{
     errorsArray.value.push({"message":"please enter a search value"})
    
   }
+  if(film.Films.values.length <1){
+   errorsArray.value.push({"message":"Search not match"})
+  }
+  
 
 
 }
@@ -60,22 +64,46 @@ const getUsersearch=():void=>{
 
 </div>
 <!-- working on the main cards of the website -->
+
+
 <div class="recomended-movies mt-20 mainContainer">
   <section>
     <div class="md:flex md:justify-between sm:flex sm:justify-between mt-8 mb-8">
       <h1 class="uppercase sm:mb-4">continue watching</h1>
 
 
-    <div v-if="errorsArray">
-      <h1 v-for="error in errorsArray" :key="error">{{ error.message}}</h1>
-    </div>
+
+
       <form @submit.prevent="getUsersearch" class="movie-search mt-8 sm:mt-0 md:mt-0">
+
         <input v-model="user_search" placeholder="popular" type="text" />
       </form>
     </div>
 
+  <div  v-if="errorsArray"  class="error-wrapper">
+    <div class="blue" :class="{errormessage:errorsArray}">
+      <h1 v-for="error in errorsArray" :key="error">{{ error.message}}</h1>
+</div>
+
+  </div>
     <theMovies :Films="film.Films"  />
   </section>
 </div>
   </main>
 </template>
+
+<style>
+.error-wrapper{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errormessage {
+
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color:#880F0F;
+}
+</style>
