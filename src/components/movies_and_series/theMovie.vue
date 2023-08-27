@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useFilm } from '@/stores/filmStore';
 const props:any=defineProps({
   film:Object
 })

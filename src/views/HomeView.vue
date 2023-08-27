@@ -7,47 +7,41 @@ import { ref } from 'vue'
 import { onBeforeMount } from 'vue'
 
 
-
-
-//calling the default movie function
-
 //get the film a store to make action
 const film =useFilm()
 
 
 //get user's search value
-let user_search=ref('')
+let user_search=ref('');
+// an array to store all the errors
+let errorsArray:any=ref([]);
 
-//get the state of the api
 
-const loaded:boolean=film.loaded
 
 //calling the default movies here
  async function getDefaultFilm(){
-  const defaultSearch:string="hello"
+         const defaultSearch=import.meta.env.VITE_DEFAULT_SEARCH
         const api_key =import.meta.env.VITE_API_KEY; 
         const res=  await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${defaultSearch}`);
         const  data = await res.json()
         film.Films= data.Search
    
 }
+//calling the default films function in a lifecycle hook
 onBeforeMount(()=>{
   getDefaultFilm()
 })
 
-//get default film
-film.SearchDfaultFilms()
-
-const defaultFilms =film.defaultFilms
-
-
+//a function to allow the user search for a film
 const getUsersearch=():void=>{
   //validate user's search 
   if(user_search.value.length>2){
     film.searchFilm(user_search.value)
   }
   else{
-    console.log("please enter a search value")
+
+    errorsArray.value.push({"message":"please enter a search value"})
+   
   }
 
 
@@ -71,12 +65,16 @@ const getUsersearch=():void=>{
     <div class="md:flex md:justify-between sm:flex sm:justify-between mt-8 mb-8">
       <h1 class="uppercase sm:mb-4">continue watching</h1>
 
+
+    <div v-if="errorsArray">
+      <h1 v-for="error in errorsArray" :key="error">{{ error.message}}</h1>
+    </div>
       <form @submit.prevent="getUsersearch" class="movie-search mt-8 sm:mt-0 md:mt-0">
         <input v-model="user_search" placeholder="popular" type="text" />
       </form>
     </div>
-    {{defaultFilms}}
-    <theMovies :Films="film.Films" :loaded="loaded" />
+
+    <theMovies :Films="film.Films"  />
   </section>
 </div>
   </main>

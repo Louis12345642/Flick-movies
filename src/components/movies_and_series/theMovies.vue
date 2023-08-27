@@ -8,10 +8,6 @@ const props:any=defineProps({
 })
 
 
-
-// if(loading){
-//       console.log("loaading")
-// }
 </script>
 
 <template>
@@ -24,7 +20,5 @@ const props:any=defineProps({
  </div>
 
  <div>
- {{ props.loaded }}
-default
  </div>
 </template>
