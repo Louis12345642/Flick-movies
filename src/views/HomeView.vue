@@ -16,20 +16,33 @@ let user_search=ref('');
 // an array to store all the errors
 let errorsArray:any=ref([]);
 
+let errorMessages=film.errorsMessage
+
+
 
 
 //calling the default movies here
  async function getDefaultFilm(){
-         const defaultSearch=import.meta.env.VITE_DEFAULT_SEARCH
+      try{
+        const defaultSearch=import.meta.env.VITE_DEFAULT_SEARCH
         const api_key =import.meta.env.VITE_API_KEY; 
         const res=  await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${defaultSearch}`);
         const  data = await res.json()
+        if (data.Search.length==0){
+          errorsArray.value.push([{"message":"movie not match"}])
+        }
         film.Films= data.Search
+ 
+      }
+      catch(error){
+        errorsArray.value.push([{"message":"movie not match"}])
+      }
    
 }
 //calling the default films function in a lifecycle hook
 onBeforeMount(()=>{
   getDefaultFilm()
+
 })
 
 //a function to allow the user search for a film
@@ -37,15 +50,14 @@ const getUsersearch=():void=>{
   //validate user's search 
   if(user_search.value !=""){
     film.searchFilm(user_search.value)
+    user_search.value =""
   }
   else{
 
     errorsArray.value.push({"message":"please enter a search value"})
    
   }
-  if(film.Films.values.length <1){
-   errorsArray.value.push({"message":"Search not match"})
-  }
+
   
 
 
@@ -55,6 +67,11 @@ const getUsersearch=():void=>{
 
 <template>
   <main>
+
+
+
+
+    
     <hero-section />
 
 <div class="mainContainer">
@@ -83,6 +100,7 @@ const getUsersearch=():void=>{
   <div  v-if="errorsArray"  class="error-wrapper">
     <div class="blue" :class="{errormessage:errorsArray}">
       <h1 v-for="error in errorsArray" :key="error">{{ error.message}}</h1>
+      <h1 v-for="error in errorMessages" :key="error">{{ error.message}}</h1>
 </div>
 
   </div>

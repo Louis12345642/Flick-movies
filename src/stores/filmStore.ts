@@ -6,7 +6,8 @@ export const useFilm =defineStore("Films",{
     return{
         Films:[],
         defaultFilms:[],
-        loaded:false
+        loaded:false,
+        errorsMessage:[{}]
     }
   },
   getters:{
@@ -16,12 +17,26 @@ export const useFilm =defineStore("Films",{
 
   actions:{
     async searchFilm(user_search:string){
-       const api_key =import.meta.env.VITE_API_KEY; 
-        const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${user_search}`);
-        const data = await res.json()
-        this.Films =data.Search
-   
+    try{
+      const api_key =import.meta.env.VITE_API_KEY; 
+      const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${user_search}`);
+      const data = await res.json()
 
+    
+      console.log(this.Films)
+      if(data.Search == undefined){
+        this.errorsMessage.push({"message":"no movie match"})
+      }
+      else{
+        this.Films =data.Search
+
+      }
+    
+    }
+    catch(error){
+      this.errorsMessage.push({"message":`${error}`})
+    }
+   
     },
   }
 }
