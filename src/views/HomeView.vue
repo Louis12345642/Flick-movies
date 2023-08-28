@@ -57,10 +57,6 @@ const getUsersearch=():void=>{
     errorsArray.value.push({"message":"please enter a search value"})
    
   }
-
-  
-
-
 }
 
 </script>
@@ -68,10 +64,6 @@ const getUsersearch=():void=>{
 <template>
   <main>
 
-
-
-
-    
     <hero-section />
 
 <div class="mainContainer">
@@ -98,19 +90,26 @@ const getUsersearch=():void=>{
     </div>
 
   <div  v-if="errorsArray"  class="error-wrapper">
-    <div class="blue" :class="{errormessage:errorsArray}">
+    <div class="black" :class="{errormessage:errorsArray}">
       <h1 v-for="error in errorsArray" :key="error">{{ error.message}}</h1>
       <h1 v-for="error in errorMessages" :key="error">{{ error.message}}</h1>
 </div>
+
+
 
   </div>
     <theMovies :Films="film.Films"  />
   </section>
 </div>
+
+
   </main>
 </template>
 
 <style>
+.black{
+  background-color: black;
+}
 .error-wrapper{
   width:100%;
   display: flex;

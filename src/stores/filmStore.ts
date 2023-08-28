@@ -7,7 +7,8 @@ export const useFilm =defineStore("Films",{
         Films:[],
         defaultFilms:[],
         loaded:false,
-        errorsMessage:[{}]
+        errorsMessage:[{}],
+        FilmDetail:[]
     }
   },
   getters:{
@@ -37,29 +38,9 @@ export const useFilm =defineStore("Films",{
       this.errorsMessage.push({"message":`${error}`})
     }
    
-    },
+    }
+
   }
 }
 )
 
-//     let Films:any =[{'name':"john wick",'Type':"movie"}]
-//    const   getSeries= computed(()=>{
-//     return "hello series"
-//    })
- 
-
-
-//     async function  searchFilm(user_search:any){
-//         const api_key =import.meta.env.VITE_API_KEY; 
-//         const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${user_search}`);
-//         const data = await res.json()
-//         Films =data.Search
-//         console.log(Films)
-    
-//     }
-
-
-
-// return{searchFilm,Films,getSeries}
-
-// });
