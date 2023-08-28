@@ -19,7 +19,7 @@ async function fetchFilmDetails(id:string) {
         const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&i=${id}`);
         const data = await res.json()
         getFilmDetails.value=data
-      
+      console.log(getFilmDetails)
     
 }
 
@@ -90,6 +90,8 @@ fetchFilmDetails(routeId)
 
             <div class="space-y-4 lg:text-lg leading-loose space-x-2">
                 <h5>{{ getFilmDetails.Plot }}</h5>
+                <h5>{{ getFilmDetails.Rated }}</h5>
+                <div class="gap-2"> <h6 v-for="rate in getFilmDetails.Ratings" :key="rate"  class="rating">{{ rate.Source }}  :   {{ rate.Value }}</h6> <img  class="w-7" src="/imdb.png" alt=""></div>
 
              
             </div>
