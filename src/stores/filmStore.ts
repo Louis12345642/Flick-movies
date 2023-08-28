@@ -20,7 +20,7 @@ export const useFilm =defineStore("Films",{
     async searchFilm(user_search:string){
     try{
       const api_key =import.meta.env.VITE_API_KEY; 
-      const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${user_search}`);
+      const res =await fetch( `http://www.omdbapi.com/?apikey=${api_key}&s=${user_search}&plot=full`);
       const data = await res.json()
 
     
