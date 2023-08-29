@@ -12,6 +12,12 @@ export const useFilm =defineStore("Films",{
     }
   },
   getters:{
+    getFilms(){
+     const filmCategory:any = this.Films.filter((ela:any)=>ela.Type == 'movie')
+
+     return filmCategory
+  
+    }
 
  
   },

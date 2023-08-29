@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import About from '../views/AboutView.vue'
 import thefilmDetailVue from '@/components/Films/thefilmDetail.vue'
+import filmCategoryVue from '@/views/filmCategory.vue'
+import path from 'path'
 
 
 const router = createRouter({
@@ -22,6 +24,11 @@ const router = createRouter({
       name:'filmDetail',
       component:thefilmDetailVue
 
+    },
+    {
+      path:'/category/:type',
+      name:' filmCategoryVue',
+      component: filmCategoryVue 
     }
   ]
 })
