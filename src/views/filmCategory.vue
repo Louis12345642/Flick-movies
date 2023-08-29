@@ -4,6 +4,8 @@ import { useFilm } from '@/stores/filmStore';
 import { onBeforeMount } from 'vue'
 import {computed} from 'vue'
 import { useRoute } from 'vue-router';
+import theFilmsVue from '@/components/Films/theFilms.vue';
+
 
 
 const router =useRoute()
@@ -35,7 +37,7 @@ onBeforeMount(()=>{
 })
 
 //filter the films base on there type
-const films=computed(
+const films:any=computed(
 ()=>{
 
      const filmCategory:any = film.Films.filter((ela:any)=>ela.Type == routeValue)
@@ -47,11 +49,23 @@ const films=computed(
 
 
 
+
 </script>
 <template>
     <div>
+        <div class="recomended-movies mt-20 mainContainer">
+  <section v-if="films.length >0">
+    <div class="md:flex md:justify-between sm:flex sm:justify-between mt-8 mb-8">
+      <h1 class="uppercase sm:mb-4">{{ films[0]?.Type }}s</h1>
 
-{{ films}}
-        category
+  </div>
+    <theFilmsVue :Films="films"/>
+  </section>
+  <section v-else>
+    <h1>No {{ routeValue }} found</h1>
+  </section>
+</div>
+
+    
     </div>
 </template>

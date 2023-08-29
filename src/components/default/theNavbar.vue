@@ -1,5 +1,7 @@
 <script setup  lang="ts" >
-import { ref, onMounted } from 'vue'
+import { ref, onMounted} from 'vue'
+import { RouterLink } from 'vue-router';
+
 //this is how you can access the dom elements in vue script setup
 const hand = ref()
 //grapping the mobile style ul tag to apply the transform style
@@ -32,16 +34,16 @@ onMounted(() => {
     >
       <div class="flex gap-1 logo">
         <img class="smallIcons" src="/logo.png" alt="" />
-        <h1><a href="/">MFlick</a></h1>
+        <h1><RouterLink to="/">MFlick</RouterLink></h1>
       </div>
       <div>
         <ul class="sm:flex navGap md:flex nav-items">
           <li>
-            <a href="#">TV shows</a>
+            <RouterLink to="#">TV shows</RouterLink>
             <div class="border-link shadow-md"></div>
           </li>
           <li>
-            <a href="#">Events</a>
+            <RouterLink to="event">Events</RouterLink>
             <div class="border-link shadow-md"></div>
           </li>
           <li>
@@ -49,11 +51,11 @@ onMounted(() => {
             <div class="border-link shadow-md"></div>
           </li>
           <li>
-            <a href="#">Movies</a>
+            <RouterLink to="category/movie">Movies</RouterLink>
             <div class="border-link shadow-md"></div>
           </li>
           <li>
-            <a href="#">Series</a>
+            <RouterLink to="category/series">Series</RouterLink>
             <div class="border-link shadow-md"></div>
           </li>
         </ul>
