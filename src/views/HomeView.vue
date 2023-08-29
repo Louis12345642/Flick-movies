@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import heroSection from '../components/hero_section/heroSection.vue'
 import theWatchHistory from '../components/watch_history/theWatchHistory.vue'
-import theMovies from '../components/movies_and_series/theMovies.vue'
+import theFilmsVue from '@/components/Films/theFilms.vue'
 import {useFilm} from '../../src/stores/filmStore'
 import { ref } from 'vue'
 import { onBeforeMount } from 'vue'
@@ -98,7 +98,7 @@ const getUsersearch=():void=>{
 
 
   </div>
-    <theMovies :Films="film.Films"  />
+    <theFilmsVue :Films="film.Films"  />
   </section>
 </div>
 
